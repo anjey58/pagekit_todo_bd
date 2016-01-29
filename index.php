@@ -29,7 +29,7 @@ return [
         'todo' => [
             'label' => 'ToDo BD', // наименование
             'url' => '@todo/admin', // url-адрес модуля по умолчанию (Controller - indexAction)
-            'icon' => 'todo:icon.png' // иконка
+            'icon' => 'todo:icon.svg' // иконка
         ]
     ],
 
