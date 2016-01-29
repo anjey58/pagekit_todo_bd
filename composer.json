@@ -1,0 +1,21 @@
+{
+    "name": "pagekit/todo",
+    "version": "0.1",
+    "type": "pagekit-extension",
+    "title": "ToDo Test BD",
+    "description": "A ToDo develop your own extensions.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ToDo BD",
+            "email": "testbd@mail.ru",
+            "homepage": "http://testbd.ru"
+        }
+    ],
+    "extra": {
+        "icon": "icon.png"
+    },
+    "archive": {
+        "exclude": ["node_modules"]
+    }
+}
