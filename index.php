@@ -4,7 +4,7 @@ use Pagekit\Application;
 
 return [
     // --------------- ОСНОВНЫЕ ---------------
-    'name' => 'todo', // уникальное имя, идентифицирующий модуль
+    'name' => 'todobd', // уникальное имя, идентифицирующий модуль
     'type' => 'extension', // тип модуля
 
     // --------------- ГЛАВНАЯ ФУНКЦИЯ ФХОДА ---------------
@@ -13,28 +13,33 @@ return [
 
     // --------------- РЕГИСТРАЦИЯ ПРОСТРАНСТВ ИМЕН ---------------
     'autoload' => [
-        'Pagekit\\ToDo\\' => 'src'
+        'Pagekit\\todobd\\' => 'src'
     ],
 
     // --------------- МАРШРУТ КОНТРОЛЛЕРА ---------------
     'routes' => [
-        '/todo' => [
-            'name' => '@todo/admin',
-            'controller' => 'Pagekit\\ToDo\\Controller\\ToDoController'
+        '/todobd' => [
+            'name' => '@todobd/admin',
+            'controller' => 'Pagekit\\todobd\\Controller\\ToDoBDController'
+        ],
+        
+        '/todobd/ajax' => [
+            'name' => '@todobd/ajax',
+            'controller' => 'Pagekit\\todobd\\Controller\\ToDoBDAjaxController'
         ]
     ],
-    
+
     // --------------- МЕНЮ В КОНСОЛИ АДМИНИСТРАТОРА ---------------
     'menu' => [
-        'todo' => [
+        'todobd' => [
             'label' => 'ToDo BD', // наименование
-            'url' => '@todo/admin', // url-адрес модуля по умолчанию (Controller - indexAction)
-            'icon' => 'todo:icon.svg' // иконка
+            'url' => '@todobd/admin', // url-адрес модуля по умолчанию (Controller - indexAction)
+            'icon' => 'todobd:icon.svg' // иконка
         ]
     ],
 
     // --------------- СОКРАЩЕНИЯ ---------------
     'resources' => [
-        'todo:' => ''
+        'todobd:' => ''
     ]
 ];
