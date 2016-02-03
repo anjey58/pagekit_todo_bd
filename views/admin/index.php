@@ -1,6 +1,6 @@
-<?php $view->script('todoDB', 'todo:js/todoBD.js', ['vue', 'jquery']) ?>
+<?php $view->script('todobd', 'todobd:js/todobd.js', ['vue', 'jquery']) ?>
 
-<div id="divtodo" class="uk-form uk-form-horizontal" v-cloak>
+<div id="divtodobd" class="uk-form uk-form-horizontal" v-cloak>
     <div class=uk-form-row>
         <input id="testval" type="text" v-model="testtable.NAME">
         <button class="uk-button uk-button-primary" @click="saveBD">Save BD</button>
