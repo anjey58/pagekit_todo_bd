@@ -11,7 +11,7 @@ $(function(module, exports) {
         methods: {
             // -----сохранить БД
             saveBD: function () {
-                alert("ID - " + this.testtable.ID + " NAME - " + this.testtable.NAME);
+                //alert("ID - " + this.testtable.ID + " NAME - " + this.testtable.NAME);
                 this.$http.post('/admin/todobd/ajax/save', {id: this.testtable.ID, data: this.testtable},
                     function (data) { // успешно
                         //alert(data.res);
