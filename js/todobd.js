@@ -1,6 +1,6 @@
 $(function(module, exports) {
     module.exports = {
-        el: '#divtodo',
+        el: '#divtodobd',
 
         // --------------- DATA ---------------
         data: function () {
@@ -10,9 +10,16 @@ $(function(module, exports) {
         // --------------- METHODS ---------------
         methods: {
             // -----сохранить БД
-            saveBD: function (e) {
-                e.preventDefault();
+            saveBD: function () {
                 alert("ID - " + this.testtable.ID + " NAME - " + this.testtable.NAME);
+                this.$http.post('/admin/todobd/ajax/save', {id: this.testtable.ID, data: this.testtable},
+                    function (data) { // успешно
+                        //alert(data.res);
+                        this.$notify('Settings saved.');
+                    }
+                ).error(function (error) { // ошибка
+                    this.$notify(error, 'warning');
+                });
             }
         }
     };
