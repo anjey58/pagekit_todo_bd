@@ -1,21 +1,21 @@
 <?php
 
-namespace Pagekit\ToDo\Controller;
+namespace Pagekit\todobd\Controller;
 
 use Pagekit\Application as App;
-use Pagekit\ToDo\Model\TestBD;
+use Pagekit\todobd\Model\TestBD;
 
 /**
  * @Access(admin=true)
  */
-class ToDoController
+class ToDoBDController
 {
     public function indexAction() {
         $fields=TestBD::find(1);
         return [
             '$view' => [
-                'title' => 'ToDo tab2',
-                'name' => 'todo:views/admin/index.php'
+                'title' => 'ToDo BD tab2',
+                'name' => 'todobd:views/admin/index.php'
             ],
             '$data' => [
                 'testtable' => $fields
